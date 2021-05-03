@@ -1,0 +1,14 @@
+__pycache__/*.pyc
+dataset/__pycache__/__init__.cpython-38.pyc
+dataset/__pycache__/CULane.cpython-38.pyc
+dataset/__pycache__/Tusimple.cpython-38.pyc
+experiments/vgg_SCNN_DULR_w9/vgg_SCNN_DULR_w9.pth
+experiments/vgg_SCNN_DULR_w9/vgg_SCNN_DULR_w9.t7
+utils/prob2lines/__pycache__/*.pyc
+utils/transforms/__pycache__/*.pyc
+utils/lane_evaluation/CULane/build/*
+experiments/*
+utils/lane_evaluation/tusimple/__pycache__/*
+demo/*
+*.ipynb
+utils/lane_evaluation/CULane/evaluate
