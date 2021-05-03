@@ -57,7 +57,7 @@ Dataset_Type = getattr(dataset, dataset_name)
 transform = Compose(Resize(resize_shape), ToTensor(),
                     Normalize(mean=mean, std=std))
 test_dataset = Dataset_Type(Dataset_Path[dataset_name], "test", transform)
-test_loader = DataLoader(test_dataset, batch_size=64, collate_fn=test_dataset.collate, num_workers=4)
+test_loader = DataLoader(test_dataset, batch_size=4, collate_fn=test_dataset.collate, num_workers=4)
 
 net = SCNN(resize_shape, pretrained=False)
 save_name = os.path.join(exp_dir, exp_dir.split('/')[-1] + '_best.pth')

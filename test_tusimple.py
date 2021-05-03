@@ -57,7 +57,7 @@ transform = Compose(Resize(resize_shape), ToTensor(),
 dataset_name = exp_cfg['dataset'].pop('dataset_name')
 Dataset_Type = getattr(dataset, dataset_name)
 test_dataset = Dataset_Type(Dataset_Path['Tusimple'], "test", transform)
-test_loader = DataLoader(test_dataset, batch_size=32, collate_fn=test_dataset.collate, num_workers=4)
+test_loader = DataLoader(test_dataset, batch_size=4, collate_fn=test_dataset.collate, num_workers=4)
 
 net = SCNN(input_size=resize_shape, pretrained=False)
 save_name = os.path.join(exp_dir, exp_dir.split('/')[-1] + '_best.pth')
